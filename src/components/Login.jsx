@@ -97,6 +97,7 @@ export default function Login() {
           onChange={handleChange}
           value={form.email}
           invalid={!!errors.email}
+          data-cy="email-input"
         />
         {errors.email && <FormFeedback>{errors.email}</FormFeedback>}
       </FormGroup>
@@ -111,6 +112,7 @@ export default function Login() {
           onChange={handleChange}
           value={form.password}
           invalid={!!errors.password}
+          data-cy="password-input"
         />
         {errors.password && <FormFeedback>{errors.password}</FormFeedback>}
       </FormGroup>
@@ -122,6 +124,7 @@ export default function Login() {
           checked={form.terms}
           type="checkbox"
           onChange={handleChange}
+          data-cy="checkbox-input"
         />
         <Label htmlFor="terms" check>
           I agree to terms of service and privacy policy
@@ -129,7 +132,7 @@ export default function Login() {
       </FormGroup>
 
       <FormGroup className="text-center p-4">
-        <Button color="primary" disabled={!isValid}>
+        <Button data-cy="submit-input" disabled={!isValid}>
           Sign In
         </Button>
       </FormGroup>
