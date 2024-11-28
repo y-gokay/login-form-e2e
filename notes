@@ -1,0 +1,9 @@
+
+Bu projede, kullanicilarin login formunu doldurmasi ve login butonuna tiklamasi için End-to-End (E2E) testi oluşturacağiz. 
+
+Test Cypresse özgü bir komut olan `cy.get()` kullanarak login formunu ve input alanlarini bulacağiz. 
+
+Daha sonra, input alanlarina değer girerek formu dolduracağiz. 
+
+Son olarak, login butonuna tiklayarak login işlemini gerçekleştireceğiz formu göndereceğiz.
+
