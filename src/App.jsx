@@ -1,16 +1,27 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login";
+import ErrorPage from "./components/ErrorPage";
+import Success from "./components/Success";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <Login></Login>
-    </>
+    <Router>
+      <>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="Success">
+            <Success />
+          </Route>
+          <Route path="ErrorPage">
+            <ErrorPage />
+          </Route>
+        </Switch>
+      </>
+    </Router>
   );
 }
 
