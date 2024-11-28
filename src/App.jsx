@@ -8,19 +8,17 @@ import Success from "./components/Success";
 function App() {
   return (
     <Router>
-      <>
-        <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
-          <Route path="Success">
-            <Success />
-          </Route>
-          <Route path="ErrorPage">
-            <ErrorPage />
-          </Route>
-        </Switch>
-      </>
+      <Switch>
+        <Route exact path="/">
+          <Login />
+        </Route>
+        <Route path="/success">
+          <Success />
+        </Route>
+        <Route path="/error">
+          <ErrorPage />
+        </Route>
+      </Switch>
     </Router>
   );
 }
